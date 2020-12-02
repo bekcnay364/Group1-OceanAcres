@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+/*--------------------------------------------------*/
+/*-----------------MOBILE FIRST---------------------*/
+/*--------------------------------------------------*/
+
+/*-----------------general---------------------*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Lucida Sans Unicode, arial, sans-serif;
+    background: none;
+    color: #243B5B;
+    }
+
+#wrapper{  
+    width:95%;
+    max-width:1170px;
+    min-width:450px;
+    margin: 0 auto;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,.3);
+    }
+
+h2{
+    font-family: Lucida Sans Unicode, sans-serif;
+    color: #899CAA; 
+}
+
+/*-----------------navigation---------------------*/
+
+.nav_top ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 2em auto 1em;
+    /*max-width: 800px;*/
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav_top ul li{
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+        
+    }
+
+.nav_top ul img{
+    height: 55px;
+}
+
+/*.nav_top ul .li_logo{
+    display: none;
+    margin-right: auto;
+    padding: 0;
+}*/
+
+
+.nav_top ul li a{
+    display: inline;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem; 
+    color: black;
+    transition: all .3s ease;
+    
+    }
+
+.nav_tope ul li a:hover {
+    color: blue;
+}
+
+.nav_top ul li a.selected {
+    color: antiquewhite;
+}
+
+/*--------------------------------------------------*/
+/*-----------------OVER 650px---------------------*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:650px){ 
+
+/*-----------------1st break pt navigation---------------------*/ 
+   
+.nav_top ul .li_logo{
+    display: inline;
+    margin-right: auto;
+    padding: 0;
+        
+}
+
+}
+
+/*--------------------------------------------------*/
+/*-----------------OVER 817px---------------------*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:817px){ 
+
+/*-----------------2nd break pt navigation-----------------*/ 
+   
+.nav_top ul .li_logo{
+    display: inline;
+    margin-right: auto;
+    padding: 1em;
+        
+}
+
+}
