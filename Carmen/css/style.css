@@ -3,9 +3,9 @@
 
 
 
-/*--------------------------------------------------*/
-/*-----------------MOBILE FIRST---------------------*/
-/*--------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*-----------------MOBILE FIRST (min 450px)---------------------*/
+/*--------------------------------------------------------------*/
 
 /*-----------------general---------------------*/
 
@@ -16,7 +16,7 @@
 }
 
 body{
-    font-family: Lucida Sans Unicode, arial, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Sans", pelago, Telex, Arial, sans-serif;
     background: none;
     color: #243B5B;
     }
@@ -30,21 +30,217 @@ body{
     }
 
 h2{
-    font-family: Lucida Sans Unicode, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Sans", pelago, Telex, Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
     color: #899CAA; 
 }
 
 /*-----------------navigation---------------------*/
 
 .nav_top ul {
+    display: none;
+}
+
+.nav_mobile ul{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     list-style: none;
     padding: 0;
     margin: 2em auto 1em;
+    background-color: #899CAA;
     /*max-width: 800px;*/
-    font-family: 'Raleway', sans-serif;
+    position: relative;
+    
+    /*border: 2px dashed blue;*/
+}
+
+.nav_mobile ul li{
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    
+    /*border: 1px solid red;*/
+}
+
+.li_logo img{
+    height: 120px;
+}
+
+.nav_mobile ul .li_logo{
+    margin-right: auto;
+    padding: 0;
+    position: absolute;
+    left: 0em;
+    margin: 0.5em 0 0 0.5em;
+    
+    /*border: 2px solid green;*/
+}
+
+.nav_mobile ul li a{
+    display: inline;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #243B5B;
+    transition: all .3s ease;
+    }
+
+.nav_mobile ul .li_anchormenu a{
+    color: white;
+    background-color: #243B5B;
+    border-radius: 0.5em;
+}
+
+.nav_mobile ul .li_anchormenu a:hover {
+    color: #243B5B;
+    background-color: #899CAA;
+}
+
+.nav_mobile ul .li_logo a:hover{
+    opacity: 0.7;
+}
+
+.nav_mobile ul li a.selected {
+    color: blue;
+}
+
+.nav_bottom ul {
+    list-style: none;
+    padding: 0;
+    
+    /*border: 2px dashed blue;*/
+}
+
+.nav_bottom ul li{
+    padding: 0.5em;
+    
+    /*border: 1px solid red;*/
+
+}
+
+.nav_bottom ul li a{
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    background-color: #243B5B;
+    transition: all .3s ease;
+    border: 2px solid #243B5B;
+    border-radius: 0.5em;
+}
+
+.nav_bottom ul li a:hover {
+    color: #243B5B;
+    background-color: #899CAA;
+}
+
+/*-----------------footer---------------------*/ 
+    
+footer {
+    background-color: #899CAA;
+    }
+
+.footer_bottom ul {
+    display: none;
+}
+
+.footer_mobile ul{
+    list-style: none;
+    padding: 0;
+    
+    /*border: 2px dashed blue;*/
+}
+
+.footer_mobile ul li{
+    padding: 0.5em;
+    
+    /*border: 1px solid red;*/
+}
+
+.footer_mobile ul li a{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    background-color: #243B5B;
+    transition: all .3s ease;
+    max-width: 720px;
+   
+    border-radius: 0.5em;
+}
+
+.footer_mobile ul li a img{
+    width: 20px;
+    margin-right: 0.5em;
+}
+
+.footer_mobile ul .li_socialmedia {
+    display: flex;
+    justify-content: center;
+    
+    /*border: 2px dashed blue;*/
+}
+
+.footer_mobile ul .li_socialmedia div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 55px;
+    
+    /*border: 2px solid yellow;*/
+}
+
+.footer_mobile ul .li_socialmedia div a{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 0.7em;
+}
+
+.footer_mobile ul .li_socialmedia div a img{
+    align-self: center;
+    margin: 0;
+}
+
+/*--------------------------------------------------*/
+/*-----------------MIN 720px------------------------*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:720px){ 
+
+/*-----------------720px break pt navigation---------------------*/ 
+   
+/*.nav_top ul .li_logo{
+    display: inline;
+    margin-right: auto;
+    padding: 0;
+        
+}*/
+    
+.nav_top ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 2em auto 1em;
+    background-color: #899CAA;
+    /*max-width: 800px;*/
+    position: relative;
+    
+    /*border: 2px dashed blue;*/
 }
 
 .nav_top ul li{
@@ -52,18 +248,19 @@ h2{
     padding: 1em;
     display: flex;
     justify-content: center;
-        
+    
+    /*border: 1px solid red;*/
     }
 
-.nav_top ul img{
-    height: 55px;
-}
-
-/*.nav_top ul .li_logo{
-    display: none;
+.nav_top ul .li_logo{
     margin-right: auto;
     padding: 0;
-}*/
+    position: absolute;
+    left: 0em;
+    margin: 0.5em 0 0 0.5em;
+    
+    /*border: 1px solid green;*/
+}
 
 
 .nav_top ul li a{
@@ -71,50 +268,100 @@ h2{
     padding: .5rem;
     text-decoration: none;
     text-align: center;
-    font-size: 1rem; 
-    color: black;
+    font-size: 1rem;
+    color: #243B5B;
     transition: all .3s ease;
-    
     }
 
-.nav_tope ul li a:hover {
-    color: blue;
+.nav_top ul li a:hover {
+    color: white;
+}
+
+.nav_top ul .li_logo a:hover{
+    opacity: 0.7;
 }
 
 .nav_top ul li a.selected {
-    color: antiquewhite;
+    color: blue;
 }
 
-/*--------------------------------------------------*/
-/*-----------------OVER 650px---------------------*/
-/*--------------------------------------------------*/
+.nav_mobile ul{
+    display: none;
+    }
 
-@media screen and (min-width:650px){ 
+.nav_bottom ul{
+    display: none;
+    }
 
-/*-----------------1st break pt navigation---------------------*/ 
+/*-----------------720px break pt footer---------------------*/    
    
-.nav_top ul .li_logo{
-    display: inline;
-    margin-right: auto;
+.footer_bottom ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
     padding: 0;
-        
+    margin: 2em auto 1em;
+    background-color: #899CAA;
+    /*max-width: 800px;*/
+    position: relative;
+    
+    /*border: 2px dashed blue;*/
 }
 
-}
-
-/*--------------------------------------------------*/
-/*-----------------OVER 817px---------------------*/
-/*--------------------------------------------------*/
-
-@media screen and (min-width:817px){ 
-
-/*-----------------2nd break pt navigation-----------------*/ 
-   
-.nav_top ul .li_logo{
-    display: inline;
-    margin-right: auto;
+.footer_bottom ul li{
+    margin: 0;
     padding: 1em;
-        
+    display: flex;
+    
+    /*border: 1px solid red;*/
+    }
+
+.footer_bottom ul li a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #243B5B;
+    transition: all .3s ease;
+    
+    /*border: 1px solid yellow;*/
+    }
+
+.footer_bottom ul li a img{
+    width: 20px;
+    margin-right: 1em;
 }
 
+.footer_bottom ul .li_socialmedia a img{
+    margin-right: 0;
+}
+
+.footer_bottom ul li a:hover {
+    color: white;
+}
+
+.footer_bottom ul li a.selected {
+    color: blue;
+}
+
+.footer_mobile ul{
+    display: none;
+    }
+
+    
+}
+
+/*--------------------------------------------------*/
+/*-----------------MIN 740px------------------------*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:740px){
+    
+
+    
 }
